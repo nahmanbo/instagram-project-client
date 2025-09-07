@@ -1,4 +1,15 @@
-.title-logo {
+.logo {
     width: 2rem;
     height: 2rem;
+  }
+
+  .img-container > .logo{
+    position: absolute;
+    z-index: 2;
+    top: 2%;
+    left: 2%;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 25%;
+    object-fit: cover;
   }
