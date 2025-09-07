@@ -41,10 +41,16 @@
     text-align: center;
     padding-left: 10px;
   }
+  .post-footer{
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
   
   .post-date { 
     font-size: .8rem; 
     color: var(--muted); 
-    padding-left: 10px;
 }
   

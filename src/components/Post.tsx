@@ -1,5 +1,7 @@
-import "../styles/post.css";
+import LikeButton from "./LikeButton";
 import Logo from "./Logo";
+
+import "../styles/post.css";
 
 
 interface PostProps {
@@ -17,9 +19,15 @@ return (
             <Logo></Logo>
             <img src={img}  className="post-img " />
         </div>
+
         <h3 className="post-name">{name}</h3>
         <p className="post-description">{description}</p>
-      {dateISO && <time className="post-date">{new Date(dateISO).toLocaleDateString("he-IL")}</time>}
+
+        <div className="post-footer">
+            {dateISO && <time className="post-date">{new Date(dateISO).toLocaleDateString("he-IL")}</time>}
+            <LikeButton/>
+        </div>
+
     </div>
   );
 }

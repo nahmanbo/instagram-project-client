@@ -1,0 +1,17 @@
+.like-section{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.like-btn{
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    border: none;
+    background-color: var(--ard-bg);
+}
+
+.like-count{
+    font-size: 1rem; 
+    color: var(--muted);    
+}
