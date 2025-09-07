@@ -1,9 +1,6 @@
 import "../styles/logo.css";
+import linkodkodLogo from "../assets/images/linkodkodLogo.jpeg"
 
-type LogoProps = {
-  logoUrl: string;
-};
-
-export default function Title({logoUrl}: LogoProps) {
-  return (<img className="title-logo" src={logoUrl} alt="logo" />);
+export default function Title() {
+  return (<img className="title-logo" src={linkodkodLogo} alt="logo" />);
 }
