@@ -13,3 +13,10 @@
     border-radius: 25%;
     object-fit: cover;
   }
+
+  .header > .logo{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 25%;
+    object-fit: cover;
+  }
