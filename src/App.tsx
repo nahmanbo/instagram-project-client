@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router";
-import './App.css'
 
 import HomePage from "./pages/HomePage";
 import AuthPage from "./pages/AuthPage";
 import CreatePage from "./pages/CreatePage";
 import PostPage from "./pages/PostPage";
 import Layout from "./components/application-layout/Layout";
+import './App.css'
 
 function App() {
   return (
