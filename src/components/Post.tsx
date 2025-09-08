@@ -3,8 +3,8 @@ import Logo from "./Logo";
 
 import "../styles/post.css";
 
-
-interface PostProps {
+export interface Post {
+  id: number;
   name: string;
   img: string;
   description: string;
@@ -12,7 +12,7 @@ interface PostProps {
 }
 
 
-export default function Post({ name, img, description, dateISO }: PostProps) {
+export default function Post({ name, img, description, dateISO }: Post) {
 return (
     <div className="post-container">
         <div className="img-container">

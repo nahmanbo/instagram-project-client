@@ -1,0 +1,18 @@
+import type {Post} from "../components/Post"
+const BASE_URL = "http://localhost:1212/api"; 
+
+// Fetch all riddles
+export const fetchAllPosts = async (): Promise<Post[]> => {
+  const res = await fetch(`${BASE_URL}/posts`, {
+    headers: {
+      Accept: "application/json"},
+  });
+
+  if (!res.ok) {
+    const errorData = await res.json();
+    throw new Error(errorData?.error || "Failed to fetch posts.");
+  }
+
+  const data = await res.json();
+  return Array.isArray(data) ? data : [];
+};
