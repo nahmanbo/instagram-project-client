@@ -1,11 +1,9 @@
-// src/pages/Crud.tsx
 import { useState } from "react";
 import { fetchAllPosts } from "../services/postAPI"; 
 import type { PostI } from "../components/Post";
 import Post from "../components/Post";
 import PostBoard from "../components/PostBoard";
 
-// Renders the CRUD page with read & delete actions.
 export default function HomePage() {
   const [posts, setPosts] = useState<PostI[]>([]);
   //const [loading, setLoading] = useState(false);
@@ -26,8 +24,7 @@ export default function HomePage() {
     }
   };
   handleRead();
-
- 
+  
   return (
     <main className="home">
         <PostBoard>

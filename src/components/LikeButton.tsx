@@ -7,7 +7,7 @@ export default function LikeButton() {
     return (
       <div className="like-section">
           <p className="like-count">{likeCount}</p>
-          <button onClick={() => setLikeCount(likeCount + 1)} className="like-btn">  ❤️</button>
+          <button onClick={() => setLikeCount(likeCount + 1)} className="like-btn">❤️</button>
       </div>);
 }
   
