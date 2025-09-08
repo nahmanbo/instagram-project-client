@@ -1,8 +1,8 @@
-import type {Post} from "../components/Post"
+import type {PostI} from "../components/Post"
 const BASE_URL = "http://localhost:1212/api"; 
 
 // Fetch all riddles
-export const fetchAllPosts = async (): Promise<Post[]> => {
+export const fetchAllPosts = async (): Promise<PostI[]> => {
   const res = await fetch(`${BASE_URL}/posts`, {
     headers: {
       Accept: "application/json"},
