@@ -1,13 +1,14 @@
+import { Routes, Route } from "react-router";
 import './App.css'
-import Post from './components/Post'
-import postData from "./assets/postData.json"
-import PostBoard from './components/PostBoard'
 import Header from './components/application-layout/Header'
 import Title from './components/application-layout/Title'
 import Logo from './components/Logo'
+import HomePage from "./pages/HomePage";
+import AuthPage from "./pages/AuthPage";
+import CreatePage from "./pages/CreatePage";
+import PostPage from "./pages/PostPage";
 
 function App() {
-
   return (
     <>
     <Header>
@@ -15,14 +16,13 @@ function App() {
         <Logo/>
     </Header>
 
-    <PostBoard>
-      <Post name={postData[0].name} img={postData[0].imjUrl} description={postData[0].description} dateISO={postData[0].dateISO}/>
-      <Post name={postData[0].name} img={postData[0].imjUrl} description={postData[0].description} dateISO={postData[0].dateISO}/>
-      <Post name={postData[0].name} img={postData[0].imjUrl} description={postData[0].description} dateISO={postData[0].dateISO}/>
-      <Post name={postData[0].name} img={postData[0].imjUrl} description={postData[0].description} dateISO={postData[0].dateISO}/>
-      <Post name={postData[0].name} img={postData[0].imjUrl} description={postData[0].description} dateISO={postData[0].dateISO}/>
-      <Post name={postData[0].name} img={postData[0].imjUrl} description={postData[0].description} dateISO={postData[0].dateISO}/>
-    </PostBoard>
+    <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/auth" element={<AuthPage />} /> 
+        <Route path="/post" element={<PostPage />} />
+        <Route path="/crate" element={<CreatePage />} />
+      </Routes>
+
     </>
   )
 }
