@@ -1,0 +1,21 @@
+.navbar {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text);
+    padding: 6px 10px;
+    border-radius: var(--radius);
+    transition: background 0.2s;
+}
+
+.nav-link:hover {
+    background: var(--hover);
+}
+
+.nav-link.active {
+    background: var(--primary);
+    color: #0b0b0b;
+}
