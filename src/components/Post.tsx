@@ -2,6 +2,8 @@ import LikeButton from "./LikeButton";
 import Logo from "./Logo";
 
 import "../styles/post.css";
+const BASE_URL = "http://localhost:1212"; 
+
 
 export interface PostI {
   id: number;
@@ -17,7 +19,7 @@ export default function Post({ name, img, description, dateISO }: PostI) {
       <div className="post-container">
           <div className="img-container">
               <Logo></Logo>
-              <img src={img}  className="post-img " />
+              <img src={`${BASE_URL}/${img}`}  className="post-img " />
           </div>
 
           <h3 className="post-name">{name}</h3>
