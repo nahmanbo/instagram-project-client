@@ -1,4 +1,5 @@
 import { NavLink } from "react-router";
+import "../../styles/application-layout/navBar.css"
 
 export type NavItem = { to: string; label: string };
 

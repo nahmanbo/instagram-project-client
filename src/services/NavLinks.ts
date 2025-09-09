@@ -8,6 +8,8 @@ export function NavLinksPerPage(): NavItem[] {
     return [
       { to: "/auth?tab=login", label: "Login" },
       { to: "/auth?tab=register", label: "Register" },
+      { to: "/Home", label: "Home" }, //temp
+
     ];
   }
   if (pathname.startsWith("/home")) {
@@ -18,7 +20,7 @@ export function NavLinksPerPage(): NavItem[] {
   }
   if (pathname.startsWith("/create")) {
     return [
-      { to: "/", label: "Home" },
+      { to: "/Home", label: "Home" },
       { to: "/post", label: "Serch Post" }
     ];
   }
