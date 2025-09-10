@@ -17,7 +17,7 @@ function App() {
           <Route path="/" element={<WelcomePage />} />
           <Route path="/auth" element={<AuthPage />} /> 
           <Route path="/home" element={<HomePage />} />
-          <Route path="/post" element={<PostPage />} />
+          <Route path="/post/:postId" element={<PostPage />} />
           <Route path="/crate" element={<CreatePage />} />
         </Routes>
     </Layout>
