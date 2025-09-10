@@ -9,6 +9,7 @@
     border: 2px solid var(--border-color, #2d2d2d);
     border-radius: var(--radius);
     background: var(--card-bg);
+    text-decoration: none;
     color: var(--text);
     box-shadow: var(--shadow);
   }
@@ -17,7 +18,7 @@
     position: relative;
     z-index: 0;
     width: 100%;
-    min-height: 250px;
+    min-height: 70%;
    }
 
   .post-img {
@@ -62,6 +63,7 @@
 
 .post > .post-container{
 width: 94vw;
+height: 80%;
 }
 
   
