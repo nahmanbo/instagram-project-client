@@ -16,3 +16,13 @@ export const fetchAllPosts = async (): Promise<PostI[]> => {
   const data = await res.json();
   return Array.isArray(data) ? data : [];
 };
+
+export const fetchPostById = async (id: string): Promise<PostI[]> => {
+  const res = await fetch(`${BASE_URL}/posts/${id}`);
+  if (!res.ok) {
+    const errorData = await res.json();
+    throw new Error(errorData?.error || "Failed to fetch post.");
+  }
+  const data = await res.json();
+  return data;
+};
