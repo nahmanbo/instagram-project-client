@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router";
 import type { FormEvent } from "react";
-import { TokenManager } from "../services/tokenManager"
+//import { TokenManager } from "../services/tokenManager"
 import { login, signup } from "../services/authAPI";
 import "../styles/auth.css";
 
@@ -22,7 +22,7 @@ export default function Auth() {
   );
 }
 
-// Renders the authentication form based on the isRegister prop.
+// Renders the authentication
 function AuthForm({ isRegister }: { isRegister: boolean }) {
   const navigate = useNavigate();
   const [error, setError] = useState("");
