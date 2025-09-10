@@ -1,69 +1,72 @@
 .post-container{
-    min-width: 200px;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: .5rem;
-    border: 2px solid var(--border-color, #2d2d2d);
-    border-radius: var(--radius);
-    background: var(--card-bg);
-    text-decoration: none;
-    color: var(--text);
-    box-shadow: var(--shadow);
-  }
+  min-width: 200px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .5rem;
+  border: 2px solid var(--border-color, #2d2d2d);
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
 
-  .img-container{
+.img-container{
     position: relative;
     z-index: 0;
     width: 100%;
     min-height: 70%;
-   }
-
-  .post-img {
-    position: absolute;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: var(--radius);
-  }
-
-  .post-name{
-    margin-left: 10px;
-    font-size: 1.2rem;
-    color: var(--text);
-    text-align: left;
-  }
-  
-  .post-description {
-    color: var(--muted);
-    text-align: center;
-    width: 100%;
-    padding-right: 10px;
-    padding-left: 10px;
-    line-break: auto;
-    text-align: left;
-
-  }
-  .post-footer{
-    bottom: 0%;
-    width: 100%;
-    padding-right: 10px;
-    padding-left: 10px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .post-date { 
-    font-size: .8rem; 
-    color: var(--muted); 
 }
 
-.post > .post-container{
-width: 94vw;
-height: 80%;
+.post-img {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.text-container{
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.post-name{
+  font-size: 1.2rem;
+  color: var(--text);
+  text-align: left;
+}
+  
+.post-description {
+  color: var(--muted);
+  text-align: center;
+  width: 100%;
+  line-break: auto;
+  text-align: left;
+}
+  
+.footer-container{
+  bottom: 1rem;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+  
+.post-date { 
+  font-size: .8rem; 
+  color: var(--muted); 
+}
+
+.post > .post-container {
+  width: 94vw;
+  height: 80%;
 }
 
   
