@@ -42,12 +42,12 @@ function AddPostForm() {
     const formData = new FormData(e.currentTarget);
     const img = formData.get("img") as string;
     const description = formData.get("description") as string;
-    const name = formData.get("name") as string;
+    const name = localStorage.getItem('username') as string;
 
     try {
          const newPost:PostI= {name, img, description} 
           await createPost(newPost);
-          navigate("/");
+          navigate("/home");
       } catch (err) {
         if (err instanceof Error) {
           setError(err.message);

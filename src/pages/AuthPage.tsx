@@ -38,17 +38,12 @@ function AuthForm({ isRegister }: { isRegister: boolean }) {
     try {
       if (isRegister) {
         await signup(username, password);
-        const { token, player } = await login(username, password);
-        TokenManager.save(token);
-        console.log(`Welcome, ${player.name}!`);
-        console.log(`Your project, ${token}!`);
+        localStorage.setItem('username', username);
       } else {
-        const { token, player } = await login(username, password);
-        TokenManager.save(token);
-        console.log(`Welcome back, ${player.name}!`);
-        console.log(`Your project, ${token}!`);
+        await login(username, password);
+        localStorage.setItem('username', username);
       }
-      navigate("/play");
+      navigate("/home");
     } catch (err) {
       if (err instanceof Error) {
         setError(err.message);

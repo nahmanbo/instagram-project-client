@@ -7,26 +7,19 @@ export function NavLinksPerPage(): NavItem[] {
   if (pathname === "/") {
     return [
       { to: "/auth?tab=login", label: "Login" },
-      { to: "/auth?tab=register", label: "Register" },
-      { to: "/home", label: "Home" }, //temp
-      { to: "/create", label: "Create" }, //temp
-
-
-    ];
+      { to: "/auth?tab=register", label: "Register" }];
   }
   if (pathname.startsWith("/home")) {
     return [
       { to: "/create", label: "Create new Post" },
-      { to: "/post", label: "Serch Post" },
+      { to: "/home", label: "Home" },
     ];
   }
   if (pathname.startsWith("/create")) {
     return [
-      { to: "/Home", label: "Home" },
-      { to: "/post", label: "Serch Post" }
+      { to: "/home", label: "Home" },
     ];
   }
   return [
-    { to: "/", label: "Home" }
-  ];
+    { to: "/", label: "Back to start" }];
 }
