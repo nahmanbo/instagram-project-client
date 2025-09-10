@@ -12,6 +12,8 @@ const sendAuthRequest = async (endpoint: string, name: string, password: string)
     const errorData = await res.json();
     throw new Error(errorData?.error || "An unknown error occurred.");
   }
+  localStorage.setItem('username', 'Alice');
+
 
   return await res.json();
 };

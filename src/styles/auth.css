@@ -1,10 +1,10 @@
 .auth {
-    min-height: 100dvh;
+    height: 100%;
     display: flex;
     align-items: center; 
     justify-content: center; 
     padding: 24px;
-    background: radial-gradient(1100px circle at 50% 20%, rgba(34,211,238,.12), transparent 42%), var(--bg);
+    background: radial-gradient(1100px circle at 50% 50%, var(--blue-app), transparent 70%), var(--bg);
 }
 
 .auth-card {

@@ -45,3 +45,17 @@ export const createPost = async (newPost: PostI): Promise<PostI[]> => {
   return data;
 };
 
+// Fetch all Posts from server
+export const fetchAllImgNames = async (): Promise<string[]> => {
+  const res = await fetch(`${BASE_URL}/posts/img`);
+
+  if (!res.ok) {
+    const errorData = await res.json();
+    throw new Error(errorData?.error || "Failed to fetch posts.");
+  }
+
+  const data = await res.json();
+  console.log("data1 ", data )
+
+  return Array.isArray(data) ? data : [];
+};
