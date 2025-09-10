@@ -35,7 +35,7 @@ export default function HomePage() {
 
         <PostBoard>
         {posts.map((post) => (
-            <Post key={post.id} id={post.id} name={post.name} img={post.img} description={post.description} dateISO={post.dateISO} />
+            <Post key={post.id} id={post.id} name={post.name} img={post.img} description={post.description} time={post.time} />
           ))}
         </PostBoard>
     </main>

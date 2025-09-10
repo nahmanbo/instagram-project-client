@@ -8,7 +8,9 @@ export function NavLinksPerPage(): NavItem[] {
     return [
       { to: "/auth?tab=login", label: "Login" },
       { to: "/auth?tab=register", label: "Register" },
-      { to: "/Home", label: "Home" }, //temp
+      { to: "/home", label: "Home" }, //temp
+      { to: "/create", label: "Create" }, //temp
+
 
     ];
   }
