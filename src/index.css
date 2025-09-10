@@ -11,18 +11,12 @@
   --muted: #9ca3af;
   --radius: 12px;
   --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  --accent: hsl(218, 87%, 24%);
-}
-
-[data-theme="light"] {
-  --bg: #fafafa;
-  --card-bg: rgba(255, 255, 255, 0.95);
-  --text: #111827;
-  --muted: #6b7280;
-  --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --blue-app: rgba(1, 61, 110);
 }
 
 body {
+  height: 100vh;
+  overflow: hidden;
   background: var(--bg);
   color: var(--text);
 }
