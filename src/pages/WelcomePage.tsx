@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import "../styles/welcome.css";
+import "../styles/welcome-page.css";
 import Logo from "../components/Logo";
 
 // Renders the welcome page with a welcome message and navigation options.

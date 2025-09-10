@@ -23,7 +23,10 @@ export default function HomePage() {
     }
   };
 
-  useEffect(() => {handleRead();}, []);  
+  useEffect(() => {handleRead()
+    document.body.style.overflow = "scroll";
+    return ()=> {document.body.style.overflow = "hidden"}
+  }, []);  
 
   return (
     <main className="home">

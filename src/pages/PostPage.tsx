@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import type { PostI } from '../components/Post';
 import Post from '../components/Post';
 import { fetchPostById } from '../services/postAPI';
+import "../styles/post-page.css"
 
 export default function PostPage() {
   const { postId } = useParams();
@@ -24,7 +25,7 @@ export default function PostPage() {
         }
       };
 
-      useEffect(() => {handleRead();}, []);  
+      useEffect(() => {handleRead();}, [postId]);  
 
   return (
     <main className="post">
