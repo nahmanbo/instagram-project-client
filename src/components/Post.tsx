@@ -1,20 +1,22 @@
+import { Link } from "react-router";
+
 import LikeButton from "./LikeButton";
 import Logo from "./Logo";
-
 import "../styles/post.css";
-import { Link } from "react-router";
+
 const BASE_URL = "http://localhost:1212"; 
 
+//Post interface with all variables and types
 export interface PostI {
-  id: number;
+  id?: number;
   name: string;
   img: string;
   description: string;
-  dateISO?: string;
+  time?: string;
 }
 
-
-export default function Post({id, name, img, description, dateISO }: PostI) {
+//Post component used on the home page on a post page
+export default function Post({id, name, img, description, time }: PostI) {
   return (
       <Link to={`/post/${id}`} className="post-container" >
           <div className="img-container">
@@ -22,14 +24,15 @@ export default function Post({id, name, img, description, dateISO }: PostI) {
               <img src={`${BASE_URL}/${img}`}  className="post-img" />
           </div>
 
-          <h3 className="post-name">{name}</h3>
-          <p className="post-description">{description}</p>
-
-          <div className="post-footer">
-              {dateISO && <time className="post-date">{new Date(dateISO).toLocaleDateString()}</time>}
+          <div className="text-container">
+              <h3 className="post-name">{name}</h3>
+              <p className="post-description">{description}</p>
+          </div>
+          
+          <div className="footer-container">
+              <time className="post-date">{time}</time>
               <LikeButton/>
           </div>
-
       </Link>
   );
 }
